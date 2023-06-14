@@ -3,8 +3,8 @@
     <?php
     session_start();
     ob_start();
-    include('header.php');
-    include('admin/db_connect.php');
+    include("header.php");
+    include("admin/db_connect.php");
 
 	$query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 	foreach ($query as $key => $value) {
@@ -45,7 +45,7 @@
        
         <?php 
         $page = isset($_GET['page']) ?$_GET['page'] : "home";
-        include $page.'.php';
+        include $page.".php";
         ?>
        
 
@@ -119,7 +119,7 @@
             <div class="container"><div class="small text-center text-muted"> <?php echo $_SESSION['setting_name'] ?> | <a href="https://www.campcodes.com" target="_blank">CampCodes</a></div></div>
         </footer>
         
-       <?php include('footer.php') ?>
+       <?php include("footer.php") ?>
     </body>
 
     <?php $conn->close() ?>

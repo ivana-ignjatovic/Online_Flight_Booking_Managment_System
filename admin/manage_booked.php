@@ -1,5 +1,5 @@
 <?php 
-include('db_connect.php');
+include("db_connect.php");
 $qry = $conn->query("SELECT * FROM booked_flight where id = ".$_GET['id']);
 foreach($qry->fetch_array() as $k => $v){
 	$$k = $v;

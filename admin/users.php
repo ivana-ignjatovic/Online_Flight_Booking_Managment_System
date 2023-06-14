@@ -24,7 +24,7 @@
 			</thead>
 			<tbody>
 				<?php
- 					include 'db_connect.php';
+ 					include "db_connect.php";
  					$users = $conn->query("SELECT * FROM users order by name asc");
  					$i = 1;
  					while($row= $users->fetch_assoc()):

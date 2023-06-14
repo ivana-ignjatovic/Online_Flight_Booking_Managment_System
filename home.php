@@ -1,5 +1,5 @@
 <?php 
-include 'admin/db_connect.php'; 
+include "admin/db_connect.php"; 
 ?>
 <style>
 #portfolio .img-fluid{
